@@ -63,3 +63,10 @@ test('should warn when given undefined', (t) => {
   t.is(convertTo(undefined, 'bar'), undefined);
   td.verify(console.warn('typedVar is undefined'));
 });
+
+test('should warn when given null', (t) => {
+  td.replace(console, 'warn', td.function());
+  t.is(convertTo(null, 'foo'), null);
+  t.is(convertTo(null, 'foo', {bar: 'baz'}), null);
+  td.verify(console.warn('typedVar is null'));
+});

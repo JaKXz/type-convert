@@ -5,13 +5,19 @@ module.exports = function convertTo(typedVar, ...input) {
     'boolean': (v) => v == 'true', // eslint-disable-line eqeqeq
     'function': (v) => v[0],
     'number': Number,
-    'object': (v) => Array.isArray(typedVar) ? [].concat(...v) : createObject(v),
+    'object': Array.isArray(typedVar) ? makeArray.bind({typedVar}) : createObject.bind({typedVar}),
     'string': String,
     'undefined': () => console.warn('typedVar is undefined')
   }[typeof typedVar](input);
 };
 
 function createObject(keysAndValues) {
+  // Since JS says typeof null === 'object', it has to be accounted for.
+  if (this.typedVar === null) {
+    console.warn('typedVar is null');
+    return this.typedVar;
+  }
+
   if (keysAndValues.length === 1) {
     if (typeof keysAndValues[0] === 'string') {
       throw new Error('key value *pairs* must be specified');
@@ -27,4 +33,8 @@ function createObject(keysAndValues) {
     }
     return result;
   }, {});
+}
+
+function makeArray(values) {
+  return [].concat(...values);
 }
