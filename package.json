@@ -1,0 +1,42 @@
+{
+  "name": "type-convert",
+  "version": "1.0.0",
+  "description": "Given a value, convert the remaining values to its type",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "xo",
+    "test": "nyc ava"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "nyc": "^7.0.0",
+    "testdouble": "^1.6.0",
+    "xo": "^0.16.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "branches": 100,
+    "functions": 100,
+    "statements": 100,
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "quote-props": [
+        "error",
+        "consistent"
+      ],
+      "babel/arrow-parens": [
+        "error",
+        "always"
+      ]
+    }
+  }
+}
