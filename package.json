@@ -4,6 +4,8 @@
   "description": "Given a value, convert the remaining values to its type",
   "main": "index.js",
   "scripts": {
+    "prerelease": "npm test && standard-version",
+    "release": "node -r dotenv/config ./node_modules/.bin/conventional-github-releaser -p angular",
     "pretest": "xo",
     "test": "nyc ava"
   },
@@ -11,8 +13,11 @@
   "license": "ISC",
   "devDependencies": {
     "ava": "^0.15.2",
+    "conventional-github-releaser": "^1.1.3",
     "coveralls": "^2.11.11",
+    "dotenv": "^2.0.0",
     "nyc": "^7.0.0",
+    "standard-version": "^2.4.0",
     "testdouble": "^1.6.0",
     "xo": "^0.16.0"
   },
