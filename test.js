@@ -2,6 +2,10 @@ import test from 'ava';
 import * as td from 'testdouble';
 import convertTo from './';
 
+test.before(() => {
+  td.replace(console, 'warn', td.function());
+});
+
 test('should convertTo a number', (t) => {
   t.is(convertTo(1, '1'), 1);
 });
@@ -12,6 +16,7 @@ test('should convertTo a string', (t) => {
 
 test('should convertTo a boolean', (t) => {
   t.false(convertTo(true, 'false'));
+  t.true(convertTo(false, 'true'));
 });
 
 test('should handle arrays', (t) => {
@@ -59,13 +64,11 @@ test('should throw when given duplicate keys', (t) => {
 });
 
 test('should warn when given undefined', (t) => {
-  td.replace(console, 'warn', td.function());
   t.is(convertTo(undefined, 'bar'), undefined);
   td.verify(console.warn('typedVar is undefined'));
 });
 
 test('should warn when given null', (t) => {
-  td.replace(console, 'warn', td.function());
   t.is(convertTo(null, 'foo'), null);
   t.is(convertTo(null, 'foo', {bar: 'baz'}), null);
   td.verify(console.warn('typedVar is null'));
