@@ -4,12 +4,17 @@
   "description": "Given a value, convert the remaining values to its type",
   "main": "index.js",
   "scripts": {
-    "prerelease": "npm test && standard-version",
-    "release": "node -r dotenv/config ./node_modules/.bin/conventional-github-releaser -p angular -r 0",
+    "prerelase": "npm test",
+    "release": "node -r dotenv/config ./node_modules/.bin/conventional-github-releaser -p angular",
+    "postrelease": "git push --follow-tags && npm publish",
     "pretest": "xo",
     "test": "nyc ava"
   },
-  "author": "",
+  "author": "Jason Kurian <jgkurian@me.com>",
+  "bugs": {
+    "url": "https://github.com/JaKXz/type-convert/issues"
+  },
+  "homepage": "https://github.com/JaKXz/type-convert#readme",
   "license": "ISC",
   "devDependencies": {
     "ava": "^0.15.2",
