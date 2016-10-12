@@ -4,7 +4,7 @@
   "description": "Given a value, convert the remaining values to its type",
   "main": "index.js",
   "scripts": {
-    "prerelease": "npm test && standard-version",
+    "prerelease": "npm test && standard-version -s",
     "release": "node -r dotenv/config ./node_modules/.bin/conventional-github-releaser -p angular",
     "postrelease": "git push --follow-tags && npm publish",
     "pretest": "xo",
