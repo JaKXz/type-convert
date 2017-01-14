@@ -3,7 +3,7 @@
 module.exports = function convertTo (typedVar, ...input) {
   return {
     'boolean': (v) => v == 'true', // eslint-disable-line eqeqeq
-    'function': (v) => v[0],
+    'function': ([v]) => v,
     'number': Number,
     'object': Array.isArray(typedVar) ? makeArray.bind({typedVar}) : createObject.bind({typedVar}),
     'string': String,
