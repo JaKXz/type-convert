@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function convertTo(typedVar, ...input) {
+module.exports = function convertTo (typedVar, ...input) {
   return {
     'boolean': (v) => v == 'true', // eslint-disable-line eqeqeq
     'function': (v) => v[0],
@@ -11,7 +11,7 @@ module.exports = function convertTo(typedVar, ...input) {
   }[typeof typedVar](input);
 };
 
-function createObject(keysAndValues) {
+function createObject (keysAndValues) {
   // Since JS says typeof null === 'object', it has to be accounted for.
   if (this.typedVar === null) {
     console.warn('typedVar is null');
@@ -35,6 +35,6 @@ function createObject(keysAndValues) {
   }, {});
 }
 
-function makeArray(values) {
+function makeArray (values) {
   return [].concat(...values);
 }

@@ -7,7 +7,7 @@
     "prerelease": "npm test && standard-version -s",
     "release": "node -r dotenv/config ./node_modules/.bin/conventional-github-releaser -p angular",
     "postrelease": "git push --follow-tags && npm publish",
-    "pretest": "xo",
+    "pretest": "semistandard",
     "test": "nyc ava"
   },
   "author": "Jason Kurian <jgkurian@me.com>",
@@ -22,9 +22,9 @@
     "coveralls": "^2.11.11",
     "dotenv": "^4.0.0",
     "nyc": "^10.0.0",
+    "semistandard": "^9.2.1",
     "standard-version": "^4.0.0",
-    "testdouble": "^1.6.0",
-    "xo": "^0.16.0"
+    "testdouble": "^1.6.0"
   },
   "nyc": {
     "check-coverage": true,
@@ -36,18 +36,5 @@
       "lcov",
       "text-summary"
     ]
-  },
-  "xo": {
-    "space": true,
-    "rules": {
-      "quote-props": [
-        "error",
-        "consistent"
-      ],
-      "babel/arrow-parens": [
-        "error",
-        "always"
-      ]
-    }
   }
 }
