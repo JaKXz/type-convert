@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/JaKXz/type-convert/compare/v1.1.4...v1.1.5) (2017-01-18)
+
+
+### Bug Fixes
+
+* use more language features ([2e99488](https://github.com/JaKXz/type-convert/commit/2e99488))
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/JaKXz/type-convert/compare/v1.1.3...v1.1.4) (2017-01-14)
 
