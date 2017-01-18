@@ -6,7 +6,7 @@
   "scripts": {
     "prerelease": "yarn test && standard-version -s",
     "release": "node -r dotenv/config ./node_modules/.bin/conventional-github-releaser -p angular",
-    "postrelease": "git push --follow-tags && yarn publish",
+    "postrelease": "git push --follow-tags && npm publish",
     "pretest": "semistandard",
     "test": "nyc ava"
   },
