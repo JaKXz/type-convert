@@ -1,14 +1,14 @@
 'use strict';
 
-module.exports = function convertTo (typedVar, ...input) {
+module.exports = function convertTo (typedVar, ...args) {
   return {
     'boolean': (v) => v == 'true', // eslint-disable-line eqeqeq
     'function': ([v]) => v,
     'number': Number,
-    'object': Array.isArray(typedVar) ? makeArray.bind({typedVar}) : createObject.bind({typedVar}),
+    'object': Array.isArray(typedVar) ? makeArray : createObject.bind({typedVar}),
     'string': String,
     'undefined': () => console.warn('typedVar is undefined')
-  }[typeof typedVar](input);
+  }[typeof typedVar](args);
 };
 
 function createObject (keysAndValues) {
@@ -25,9 +25,8 @@ function createObject (keysAndValues) {
     return keysAndValues[0];
   }
   return keysAndValues.reduce((result, value, index, array) => {
-    // eslint-disable-next-line no-prototype-builtins
     if (index % 2 === 0 && result.hasOwnProperty(value)) {
-      throw new Error('duplicated key: "' + value + '"');
+      throw new Error(`duplicated key: "${value}"`);
     } else if (index % 2 !== 0) {
       result[array[index - 1]] = value;
     }
