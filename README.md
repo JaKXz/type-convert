@@ -1,4 +1,6 @@
 # type-convert
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/JaKXz/type-convert.svg)](https://greenkeeper.io/)
 [![npm](https://img.shields.io/npm/v/type-convert.svg?maxAge=2592000)](https://npm.im/type-convert)
 [![Build Status](https://travis-ci.org/JaKXz/type-convert.svg?branch=master)](https://travis-ci.org/JaKXz/type-convert)
 [![Coverage Status](https://coveralls.io/repos/github/JaKXz/type-convert/badge.svg?branch=master)](https://coveralls.io/github/JaKXz/type-convert?branch=master)
