@@ -25,7 +25,7 @@ function createObject (keysAndValues) {
     return keysAndValues[0];
   }
   return keysAndValues.reduce((result, value, index, array) => {
-    if (index % 2 === 0 && result.hasOwnProperty(value)) {
+    if (index % 2 === 0 && value in result) {
       throw new Error(`duplicated key: "${value}"`);
     } else if (index % 2 !== 0) {
       result[array[index - 1]] = value;
