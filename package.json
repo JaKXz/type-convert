@@ -22,7 +22,7 @@
     "coveralls": "^2.11.11",
     "dotenv": "^4.0.0",
     "nyc": "^10.0.0",
-    "semistandard": "^9.2.1",
+    "semistandard": "^10.0.0",
     "standard-version": "^4.0.0",
     "testdouble": "^1.6.0"
   },
