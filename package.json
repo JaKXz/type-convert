@@ -24,7 +24,7 @@
     "nyc": "^10.0.0",
     "semistandard": "^10.0.0",
     "standard-version": "^4.0.0",
-    "testdouble": "^1.6.0"
+    "testdouble": "^2.0.1"
   },
   "nyc": {
     "check-coverage": true,
