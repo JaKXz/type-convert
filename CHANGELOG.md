@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.7"></a>
+## [1.1.7](https://github.com/JaKXz/type-convert/compare/v1.1.4...v1.1.7) (2017-04-10)
+
+
+### Bug Fixes
+
+* use in keyword rather than hasOwnProperty ([c66b958](https://github.com/JaKXz/type-convert/commit/c66b958))
+* use more language features ([d41cde9](https://github.com/JaKXz/type-convert/commit/d41cde9))
+* **package:** specify files to publish ([c775479](https://github.com/JaKXz/type-convert/commit/c775479))
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/JaKXz/type-convert/compare/v1.1.4...v1.1.6) (2017-01-30)
 

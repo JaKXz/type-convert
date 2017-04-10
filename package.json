@@ -1,6 +1,6 @@
 {
   "name": "type-convert",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Given a value, convert the remaining values to its type",
   "main": "index.js",
   "files": [
