@@ -20,7 +20,7 @@
   "homepage": "https://github.com/JaKXz/type-convert#readme",
   "license": "ISC",
   "devDependencies": {
-    "ava": "^0.20.0",
+    "ava": "^0.21.0",
     "conventional-github-releaser": "^1.1.12",
     "coveralls": "^2.13.1",
     "dotenv": "^4.0.0",
