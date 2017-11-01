@@ -21,7 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "ava": "^0.20.0",
-    "conventional-github-releaser": "^1.1.12",
+    "conventional-github-releaser": "^2.0.0",
     "coveralls": "^2.13.1",
     "dotenv": "^4.0.0",
     "nyc": "^11.0.3",
