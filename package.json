@@ -23,7 +23,7 @@
     "ava": "^0.20.0",
     "conventional-github-releaser": "^1.1.12",
     "coveralls": "^2.13.1",
-    "dotenv": "^4.0.0",
+    "dotenv": "^5.0.1",
     "nyc": "^11.0.3",
     "semistandard": "^11.0.0",
     "standard-version": "^4.2.0",
